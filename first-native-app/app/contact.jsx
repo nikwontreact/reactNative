@@ -1,16 +1,19 @@
-import { StyleSheet, Text, View ,useColorScheme} from "react-native";
+import { StyleSheet } from "react-native";
 import { Link } from "expo-router";
-import { Colors } from "../constants/Colors";
 import React from "react";
+import ThemedView from "../components/ThemedView";
+import ThemedText from "../components/ThemedText";
+import Spacer from "../components/Spacer";
 
 const contact = () => {
-  const colorScheme = useColorScheme()
-  const theme = Colors[colorScheme] ?? Colors.light
   return (
-    <View style= {[styles.container,{backgroundColor:theme.background}]}>
-      <Text style= {[styles.title,{color:theme.text}]}>contact</Text>
-      <Link href="/" style= { [styles.link,{color:theme.text,borderBottomColor:theme.text}]}>Home </Link>
-    </View>
+    <ThemedView style={styles.container}>
+      <ThemedText style={styles.title}>contact</ThemedText>
+      <Spacer height={10}/> //!Make changes in height to manipulate space
+      <Link href="/" style={styles.link}>
+        <ThemedText>Home</ThemedText>
+      </Link>
+    </ThemedView>
   );
 };
 
@@ -25,11 +28,8 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: "bold",
     fontSize: 18,
-    color: "red",
   },
   link: {
     borderBottomWidth: 1,
-    marginVertical: 10,
-    color: "blue",
   },
 });

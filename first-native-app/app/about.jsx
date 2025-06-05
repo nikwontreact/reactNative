@@ -1,23 +1,24 @@
-import {StyleSheet, View, Text ,useColorScheme} from 'react-native'
-import React from 'react'
-import { Link } from 'expo-router'
-import { Colors } from '../constants/Colors'
+import { StyleSheet, View, Text } from "react-native";
+import React from "react";
+import { Link } from "expo-router";
 
-
+import ThemedView from "../components/ThemedView";
+import ThemedText from "../components/ThemedText";
+import Spacer from "../components/Spacer";
 
 const about = () => {
-   
-  const colorScheme = useColorScheme()
-  const theme = Colors[colorScheme] ?? Colors.light
   return (
-    <View style ={[styles.container,{backgroundColor: theme.background}]} >
-      <Text style = {[styles.title,{color:theme.text}]}>About</Text>
-      <Link href='/' style= {[styles.link,{color: theme.text,borderBottomColor:theme.text}]} > Home page</Link>
-    </View>
-  )
-}
+    <ThemedView style={styles.container}>
+      <ThemedText style={styles.title}>About</ThemedText>
+      <Spacer height={10}/> //! Make changes in height to make changes in space
+      <Link href="/" style={styles.link}>
+        <ThemedText>Home page</ThemedText>
+      </Link>
+    </ThemedView>
+  );
+};
 
-export default about
+export default about;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -25,15 +26,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   title: {
-    fontWeight: '900',
+    fontWeight: "900",
     fontSize: 18,
-    color: "red",
   },
   link: {
-    borderBottomWidth:1,
-    marginVertical:10,
-    color:'blue',
-    
-  }
-
+    borderBottomWidth: 1,
+  },
 });

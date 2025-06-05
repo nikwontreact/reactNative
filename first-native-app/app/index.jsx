@@ -9,7 +9,7 @@ import ThemedText from "../components/ThemedText";
 const Home = () => {
   return (
     <ThemedView style={styles.container}>
-      <ThemedLogo style={styles.img} />
+      <ThemedLogo />
       <ThemedText style={styles.title} title={true}>
         One Piece{" "}
       </ThemedText>
@@ -19,6 +19,7 @@ const Home = () => {
       <Link href="/about" style={styles.link}>
         <ThemedText>About Page</ThemedText>
       </Link>
+
       <Link href="/contact" style={styles.link}>
         <ThemedText>Contact Page</ThemedText>
       </Link>
@@ -42,5 +43,6 @@ const styles = StyleSheet.create({
   link: {
     borderBottomWidth: 1,
     marginVertical: 10,
+
   },
 });
