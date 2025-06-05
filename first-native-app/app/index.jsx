@@ -1,21 +1,28 @@
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, Text, useColorScheme } from "react-native";
 import { Link } from "expo-router";
-import Logo from "../assets/logo.webp";
+
+import ThemedView from "../components/ThemedView";
+import ThemedLogo from "../components/ThemedLogo";
+import Spacer from "../components/Spacer";
+import ThemedText from "../components/ThemedText";
+
 const Home = () => {
   return (
-    <View style={styles.container}>
-      <Image source={Logo} style={styles.img} />
-      <Text style={styles.title}>Number 1</Text>
-      <Text style={{ marginTop: 10, marginBottom: 30, fontWeight: "bold" }}>
-        Reading list app
-      </Text>
+    <ThemedView style={styles.container}>
+      <ThemedLogo style={styles.img} />
+      <ThemedText style={styles.title} title={true}>
+        One Piece{" "}
+      </ThemedText>
+      <Spacer height={10} />
+      <ThemedText>The best Anime in the world</ThemedText>
+      <Spacer />
       <Link href="/about" style={styles.link}>
-        About Page
+        <ThemedText>About Page</ThemedText>
       </Link>
       <Link href="/contact" style={styles.link}>
-        contact Page
+        <ThemedText>Contact Page</ThemedText>
       </Link>
-    </View>
+    </ThemedView>
   );
 };
 
@@ -30,16 +37,10 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: "bold",
     fontSize: 18,
-    color: "red",
   },
 
-  img: {
-    height: "30%",
-    resizeMode: "contain",
-  },
   link: {
     borderBottomWidth: 1,
     marginVertical: 10,
-    color: "blue",
   },
 });
