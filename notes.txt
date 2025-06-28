@@ -1,0 +1,7 @@
+tutorial#11, Topic:safe area view, date 22 june.
+-safe area view is use to use area of screen without ovelapping the icons of device
+-using <safeAreaView/> can be choppy so we use another method.
+-we use useSafeAreaInsets() hook, it returns the safe dimensions around the device edges ,top, bottom and left.
+
+tutorial#12 Topic: Setting backup with Appwrite.
+-setup reactnative backend in appwrite using appwrite docs.

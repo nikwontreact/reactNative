@@ -16,6 +16,7 @@ const Home = () => {
       <Spacer height={10} />
       <ThemedText>The best Anime in the world</ThemedText>
       <Spacer />
+
       <Link href="/register" style={styles.link}>
         <ThemedText>Register Now</ThemedText>
       </Link>
@@ -23,6 +24,11 @@ const Home = () => {
       <Link href="/login" style={styles.link}>
         <ThemedText>Login</ThemedText>
       </Link>
+
+       <Link href="/profile" style={styles.link}>
+        <ThemedText>profile page</ThemedText>
+      </Link>
+
     </ThemedView>
   );
 };
