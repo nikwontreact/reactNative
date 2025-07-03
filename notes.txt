@@ -5,3 +5,8 @@ tutorial#11, Topic:safe area view, date 22 june.
 
 tutorial#12 Topic: Setting backup with Appwrite.
 -setup reactnative backend in appwrite using appwrite docs.
+
+tutorial#13 Topic: Login and signup forms. date 3 july.
+-learned about event handling
+-secure text entry for password hiding
+-Touchable without feedback :- closing keypads when touch anywhere on the screen.
